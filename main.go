@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -11,6 +13,6 @@ func main() {
 		return c.SendString("Hello, World 👋!")
 	})
 
-	// app.Listen(":" + os.Getenv("PORT"))
-	app.Listen(":3000")
+	app.Listen(":" + os.Getenv("PORT"))
+	//app.Listen(":3000")
 }
